@@ -1,0 +1,188 @@
+/* Container for the profile */
+.pro-display {
+  position: absolute;
+  top: 20%;
+  /* Vertically center the container */
+  left: 45%;
+  /* Horizontally center the container */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #054659;
+  color: #ffffff;
+  padding: 1% 2%;
+  border-radius: 20px;
+  box-shadow: 1px 10px 15px rgba(0, 0, 127, 0.405);
+  width: 30%;
+  max-width: 50%;
+}
+
+/* Profile picture styling */
+.pro-pic img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255);
+
+}
+
+/* Information section */
+.information {
+  text-align: center;
+}
+
+.information h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+#table {
+  width: 150%;
+  font-size: larger;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+#table td {
+  padding: 5%;
+
+  font-size: 16px;
+}
+
+#col {
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Edit button styling */
+#edit {
+  background-color: #005a9a;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+#edit:hover {
+  background-color: #f6f6f6;
+  color: black;
+
+}
+
+
+
+
+
+/* Container for the entire profile page */
+.pro-page {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 13%;
+  /* Adjust as needed */
+}
+
+.profile-page {
+  max-width: 40%;
+  background-color: #054659;
+  /* Optional: background color for the profile container */
+  padding: 2%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 20%;
+  top: -87vh;
+  width: 35%;
+  border-radius: 20px;
+  box-shadow: 1px 10px 15px rgba(0, 0, 127, 0.405);
+
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#pic {
+  width: 100px;
+  /* Adjust size as needed */
+  height: 100px;
+  /* Adjust size as needed */
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid white;
+}
+
+#edit1 {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+}
+
+#edit1:hover {
+  background-color: #0056b3;
+
+}
+
+.account-settings {
+  margin-top: 1%;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.form-row input {
+  padding: 8px;
+  color: white;
+  border-radius: 4px;
+  background: transparent;
+  outline: 0;
+  border: none;
+  font-size: medium;
+}
+
+#in-ty {
+  border-bottom: 3px solid #ffffff;
+}
+
+#update {
+  width: 30%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 35%;
+  margin-top: 2%;
+}
+
+#update:hover {
+  background-color: #0056b3;
+}

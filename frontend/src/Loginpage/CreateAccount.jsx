@@ -21,7 +21,6 @@ const CreateAccount = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const { username, email, password, confirmPassword } = form;
-    
 
         if (password !== confirmPassword) {
             alert("Passwords do not match!");
@@ -42,64 +41,68 @@ const CreateAccount = () => {
     };
 
     return (
-        <>
+        <div className="body">
             <div className="signup-page">
                 <div className="form-container">
-                    <img id="logo1" className="img1" src="/logo3.png" alt="" />
-                    <h2>Create Account</h2>
-                    <form onSubmit={handleSubmit} method='post'>
-                        <div className="form-group">
-                            <label>Username</label>
-                            <input
-                                type="text"
-                                name="username"
-                                value={form.username}
-                                onChange={handleChange}
-                                placeholder="Type Here"
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label>Email</label>
-                            <input
-                                type="email"
-                                name="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                placeholder="Email@example.com"
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label>Password</label>
-                            <input
-                                type="password"
-                                name="password"
-                                value={form.password}
-                                onChange={handleChange}
-                                placeholder="Type Here"
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label>Confirm Password</label>
-                            <input
-                                type="password"
-                                name="confirmPassword"
-                                value={form.confirmPassword}
-                                onChange={handleChange}
-                                placeholder="Type Here"
-                                required
-                            />
-                        </div>
-                        <button type="submit">Register</button>
-                    </form>
-                    <p id="lastline">
-                        Already have an account? <Link to="/loginpage">Login Now</Link>
-                    </p>
+                    <div className="sign-form">
+                        <h3>Create Account</h3>
+                        <form onSubmit={handleSubmit}>
+                            <div className="form-group1">
+                                <label>Username</label>
+                                <input id='in'
+                                    type="text"
+                                    name="username"
+                                    value={form.username}
+                                    onChange={handleChange}
+                                    placeholder="Type Here"
+                                    required
+                                />
+                            </div>
+                            <div className="form-group1">
+                                <label>Email</label>
+                                <input id='in'
+                                    type="email"
+                                    name="email"
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    placeholder="Email@example.com"
+                                    required
+                                />
+                            </div>
+                            <div className="form-group1">
+                                <label>Password</label>
+                                <input id='in'
+                                    type="password"
+                                    name="password"
+                                    value={form.password}
+                                    onChange={handleChange}
+                                    placeholder="Type Here"
+                                    required
+                                />
+                            </div>
+                            <div className="form-group1">
+                                <label>Confirm Password</label>
+                                <input id='in'
+                                    type="password"
+                                    name="confirmPassword"
+                                    value={form.confirmPassword}
+                                    onChange={handleChange}
+                                    placeholder="Type Here"
+                                    required
+                                />
+                            </div>
+                            <button id="btn-signup" type="submit">Register</button>
+                        </form>
+                        <p>
+                            Already have an account? <Link to="/loginpage">Login Now</Link>
+                        </p>
+                    </div>
+                </div>
+                <div className="login-image">
+                    <img src="backdrop.png" alt="Login Illustration" />
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

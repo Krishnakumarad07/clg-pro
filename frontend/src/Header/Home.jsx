@@ -1,42 +1,63 @@
 import React from 'react';
 import './Home.css'
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 function Home() {
     return (
         <>
-            <div className="container">
-                <header className="header">
-                    {/* <div className="logo">Smart<span>Recruiter</span></div> */}
-                    <img id="logo" src="/logo3.png" alt="" />
-                    <nav className="navbar">
-                        <a href="#jobs">Jobs</a>
-                        <a href="#dashboard">Dashboard</a>
-                        {/* <a className="login-btn" to='login'>Login</a> */}
-                        <Link to="/loginpage">Login</Link>
+            <div className="container-home">
+                <header className="home-page">
+                    <div id='home' className="welcome-line">
+                        <p>Welcome Our Job Portal, <span>Recruit...</span></p>
 
+                        <FontAwesomeIcon icon={faFacebook} />
+                        <FontAwesomeIcon icon={faTwitter} />
+                        <FontAwesomeIcon icon={faLinkedin} />
+                        <FontAwesomeIcon icon={faInstagram} />
+
+                    </div>
+
+
+
+                    <nav className='navbar'>
+                        <img id='pro-icon' src="pro-logo.png" alt="logo" />
+                        <h1>Recruit</h1>
+
+                        <ul className='navbar-list'>
+                            <Link to='/'><li className='nav-list-items'>Home</li></Link>
+                            <a href="#"> <Link to='/jobs' > <li className='nav-list-items'>Jobs</li></Link></a>
+                            <Link to='/dashboard'><li className='nav-list-items'>Dashboard</li></Link>
+                            {/* <a href="#footer">  <li className='nav-list-items'>Contact</li></a> */}
+                            <a href="#footer">  <li className='nav-list-items'>About</li></a>
+                            <Link to='/loginpage' > <li className='nav-list-items'>Login</li></Link>
+                            <Link to='/post job' ><li className='nav-list-items'>Post Jobs</li></Link>
+                        </ul>
                     </nav>
+                    <div className="home-banner">
+                        <div className="box">
+
+                            <h1>To Get A Dream Job <span>Today.</span></h1>
+                            <p>1000+ peoples are visit this portal daily..</p>
+                            <Link to='/sign'><button>Apply Now</button></Link>
+                        </div>
+
+                        <img id='backdrop' src="backdrop.png" alt="backdrop" />
+                    </div>
                 </header>
-                <main className="main-content">
-                    <h1 id='h1tag'>Get Your <span className="highlight">Dream Job</span> Today!</h1>
-                    <p className="para">
-                        Lorem ipsum dolor sit amet consectetur adipisi eius aut mollitia quasi nisi voluptatem similique, tempore totam, odit repellendus non. Dolores eos animi recusandae.
-                    </p>
-                    {/* <a className="apply-btn" >Apply Now</a> */}
-                    <Link id='link-id' to="/sign">Apply Now</Link>
-                </main>
-                <div className='img'>
-                    <figure className="image-container">
-                        <img id='pic' src="/bgimg.png" alt="Illustration" />
-                    </figure>
-                </div>
+                <main className='main-cont'>
+                    <h3 id='com-name'>Our Trusted Company</h3>
+                    <div className="company-logo">
+                        <img src="logo1 (4).png" alt="company1" />
+                        <img src="logo1 (2).png" alt="company2" />
+                        <img src="logo1 (3).png" alt="company3" />
+                        <img src="logo1 (1).png" alt="company4" />
+                        <img src="logo1 (6).png" alt="company5" />
+                        <img src="logo1 (5).png" alt="company5" />
+                    </div>
+                    <div className="sec-list">
 
-            </div>
-
-            <div className='container-2'>
-
-                <div className="box">
-                    <div className="box-header">
                         <div className="vacancies-section">
                             <h1 id='heading'>Most Popular Vacancies</h1>
                             <div className="vacancies-list">
@@ -72,110 +93,85 @@ function Home() {
                                     <p>Financial Manager</p>
                                     <p id='one'>50,364 Open Positions</p>
                                 </div>
-                                {/* <div>
-                                    <p>Maxillofacial Surgeons</p>
-                                    <p id='one'>50,364 Open Positions</p>
-                                </div>
-                                <div>
-                                    <p>Orthodontists</p>
-                                    <p id='one'>50,364 Open Positions</p>
-                                </div>
-                                <div>
-                                    <p>Management Analysis</p>
-                                    <p id='one'>50,364 Open Positions</p>
-                                </div>
-                                <div>
-                                    <p>IT Manager</p>
-                                    <p id='one'>50,364 Open Positions</p>
-                                </div> */}
+
                             </div>
                         </div>
+                    </div>
+                    <div className="job-portal-box">
                         <div className="job-portal-banner">
                             <h2>How Job Portal Works</h2>
                             <p>
-                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-                                cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                                To Choose Your Trending Job Dream & To Make Future Bright.
                             </p>
 
                             <div className="job-portal-stats">
                                 <div className="stat-item">
-                                    <h3>12</h3>
-                                    <p id='one'>Offices worldwide</p>
+
+                                    <h3>Account Create</h3>
+                                    <p >To create your account be confident & safely</p>
                                 </div>
                                 <div className="stat-item">
-                                    <h3>300+</h3>
-                                    <p id='one'>Full-time colleagues</p>
+                                    <h3>Upload Resume</h3>
+                                    <p >To create your account be confident & safely</p>
                                 </div>
                                 <div className="stat-item">
-                                    <h3>40</h3>
-                                    <p id='one'>Hours per week</p>
+                                    <h3>Find Jobs</h3>
+                                    <p >To create your account be confident & safely</p>
                                 </div>
                                 <div className="stat-item">
-                                    <h3>Unlimited</h3>
-                                    <p id='one'>Paid time off</p>
+                                    <h3>Apply Jobs</h3>
+                                    <p >To create your account be confident & safely</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                </div>
-
-            </div>
-
-            <div className='container-3'>
-                <div className="about-page" id='aboutpage'>
-                    <header className="header1">
-                        <h1 className="title">About Us</h1>
-                        <p className="subtitle">Empowering Your Career Journey</p>
-                    </header>
-
-                    <section className="introduction">
-                        <h2 className="section-title">Who We Are</h2>
-                        <p className="section-description">
-                            At Recruit , we are dedicated to bridging the gap between talented professionals and top employers.
-                            Our mission is to provide innovative recruitment solutions that help organizations find the best talent while
-                            offering job seekers access to exciting career opportunities.
-                        </p>
-                    </section>
-
-                    <section className="our-values">
-                        <h2 className="section-title">Our Core Values</h2>
-                        <div className="values-container">
-                            <div className="value-item">
-                                <h3 className="value-title">Integrity</h3>
-                                <p className="value-description">
-                                    We operate with honesty and transparency in all our interactions.
-                                </p>
-                            </div>
-                            <div className="value-item">
-                                <h3 className="value-title">Innovation</h3>
-                                <p className="value-description">
-                                    We embrace creativity and new technologies to stay ahead in the recruitment industry.
-                                </p>
-                            </div>
-                            <div className="value-item">
-                                <h3 className="value-title">Excellence</h3>
-                                <p className="value-description">
-                                    We strive for excellence in everything we do, aiming to exceed expectations.
-                                </p>
-                            </div>
-                            <div className="value-item">
-                                <h3 className="value-title">Customer Focus</h3>
-                                <p className="value-description">
-                                    We put our clients' needs first and work diligently to achieve their goals.
-                                </p>
-                            </div>
+                </main>
+                <footer id='footer' className="footer">
+                    <div className="footer-info">
+                        <div className="about">
+                            <a href='#home'>  <h3>About Company</h3>
+                                <p>Contact Us</p>
+                                <p>Terms & Condition</p>
+                                <p>Privacy & Policy</p>
+                                <p>Candidate Listing</p>
+                            </a>
                         </div>
-                    </section>
+                        
+                        <div className="can-support">
+                            <a href='#home'> <h3>For Candidates</h3>
+                                <p>Upload Resume </p>
+                                <p>Save JobList</p>
+                                <p>Candidate Dashboard</p>
+                                <p>Browse Jobs</p></a>
 
-                    <footer className="footer">
-                        <p>&copy; {new Date().getFullYear()} __@Recruit. All rights reserved.</p>
-                    </footer>
-                </div>
+                        </div>
+                        <div id='ab-img'>
+                            <img src="about1.png" alt="" />
+                        </div>
 
+                        <div className="emp">
+                            <a href="#home"> <h3>For Employers</h3>
+                                <p>Post A Job</p>
+                                <p>Job Package</p>
+                                <p>Employee Dashboard</p></a>
+
+                        </div>
+                        {/* <div id='ab-img'>
+                            <img src="about.png" alt="" />
+                        </div> */}
+                        <div className="support">
+                            <h3>Support</h3>
+                            <FontAwesomeIcon icon={faFacebook} />
+                            <FontAwesomeIcon icon={faTwitter} />
+                            <FontAwesomeIcon icon={faLinkedin} />
+                            <FontAwesomeIcon icon={faInstagram} />
+
+                        </div>
+
+                    </div>
+                    <p id='last-line'>&copy; {new Date().getFullYear()} __@Recruit. All rights reserved.</p>
+                </footer>
             </div>
-
-
 
         </>
     );

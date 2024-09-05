@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#pro-icon1 {
+    width: 4%;
+    height: 4%;
+    margin-left: 4%;
+}
+
+.nav-jobs {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background: #fff;
+    
+}
+
+
+.navbar1 {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #052659;
+    
+}
+
+.navbar1 h1 {
+    font-size: 29px;
+}
+
+.navbar-list1 {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    font-size: medium;
+    margin-right: 2%;
+}
+
+.navbar-list1 a, .navbar-list1 button {
+    text-decoration: none;
+    color: #052659;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-list-items1 {
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-list-items1 a:hover, .nav-list-items1 button:hover {
+    color: #052659;
+    text-decoration: underline;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .modal-content {
+    background-color: #053659;
+    padding: 3% 5%;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .modal-content h3 {
+    margin-bottom: 8%;
+    font-size: 30px;
+  }
+  
+  .modal-content button {
+    margin: 15px;
+    margin-top: 14%;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: medium;
+  }
+  
+  .modal-content button:hover {
+    background-color: transparent;
+  
+    color: #ffffff;
+  
+  
+  }
+
+  .job-container {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 3% ;
+    
+    margin-top:6%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .job-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .job-dis-cont {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 14px 15px;
+    width: 100%;
+    height: auto;
+  }
+
+.img-back img {
+    width: 100%;
+    height: auto;
+}
