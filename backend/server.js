@@ -2,7 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const authRoutes = require('./Router/auth');
+const userauthRoutes = require('./Router/userauth');
+const OrgauthRoutes = require("./Router/orgauth");
+
 dotenv.config();
 
 const PORT = 8081;
@@ -11,7 +13,8 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use('/auth', authRoutes);
+app.use('/userauth', userauthRoutes);
+app.use('/org-auth', OrgauthRoutes);
 
 const MONGOURI = process.env.MONGO_URI;
 

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './CreateAccount.css';
+import { Link, useNavigate } from 'react-router-dom';
+import './Signup.css';
 import axios from 'axios';
 
-const CreateAccount = () => {
+const Signup = () => {
     const [form, setForm] = useState({
-        username: '',
+        orgname: '',
         email: '',
         password: '',
         confirmPassword: '',
@@ -17,10 +17,11 @@ const CreateAccount = () => {
             [e.target.name]: e.target.value,
         });
     };
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { username, email, password, confirmPassword } = form;
+        const { orgname, email, password, confirmPassword } = form;
 
         if (password !== confirmPassword) {
             alert("Passwords do not match!");
@@ -28,13 +29,14 @@ const CreateAccount = () => {
         }
 
         // Make the POST request
-        axios.post('http://localhost:8081/auth/signup', { username, email, password })
-            .then(res => {
+        axios.post('http://localhost:8081/org-auth/signup', { orgname, org_email:email, password })
+            .then((res) => {
                 console.log('Response:', res.data);
                 localStorage.setItem('token', res.data.token);
                 alert('Account created successfully!');
+                navigate("/orglogin")
             })
-            .catch(err => {
+            .catch((err) => {
                 console.error('Error:', err.response ? err.response.data : err.message);
                 alert('Failed to create account. Please try again.');
             });
@@ -45,19 +47,41 @@ const CreateAccount = () => {
             <div className="signup-page">
                 <div className="form-container">
                     <div className="sign-form">
-                        <h3>Create Account</h3>
+                        <h3>Create Org Account</h3>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group1">
-                                <label>Username</label>
+                                <label>Org name</label>
                                 <input id='in'
                                     type="text"
-                                    name="username"
-                                    value={form.username}
+                                    name="orgname"
+                                    value={form.orgname}
                                     onChange={handleChange}
                                     placeholder="Type Here"
                                     required
                                 />
                             </div>
+                            {/* <div className="form-group1">
+                                <label>Email</label>
+                                <input id='in'
+                                    type="email"
+                                    name="email"
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    placeholder="Email@example.com"
+                                    required
+                                />
+                            </div>
+                            <div className="form-group1">
+                                <label>Email</label>
+                                <input id='in'
+                                    type="email"
+                                    name="email"
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    placeholder="Email@example.com"
+                                    required
+                                />
+                            </div> */}
                             <div className="form-group1">
                                 <label>Email</label>
                                 <input id='in'
@@ -94,7 +118,7 @@ const CreateAccount = () => {
                             <button id="btn-signup" type="submit">Register</button>
                         </form>
                         <p>
-                            Already have an account? <Link to="/loginpage">Login Now</Link>
+                            Already have an account? <Link to="/orglogin">Login Now</Link>
                         </p>
                     </div>
                 </div>
@@ -106,4 +130,4 @@ const CreateAccount = () => {
     );
 };
 
-export default CreateAccount;
+export default Signup;

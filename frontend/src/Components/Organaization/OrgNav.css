@@ -1,0 +1,130 @@
+.co {
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+  }
+  
+  #pro-icon1 {
+    width: 4%;
+    height: 4%;
+    margin-left: 4%;
+  
+  
+  }
+  
+  .navbar1 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #052659;
+    animation: slideInRight 0.8s ease-out;
+  }
+  .navbar1 h1 {
+    font-size: 29px;
+  }
+  
+  .navbar-list1 {
+    display: flex;
+    list-style: none;
+    margin-left: 60%;
+    font-size: medium;
+  }
+  
+  .navbar-list1 a {
+    text-decoration: none;
+  }
+  
+  .nav-list-items1 {
+    margin-left: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #052659;
+  }
+  
+  .nav-list-items1:hover {
+    
+    text-decoration: underline;
+    animation:pulse 1s ease infinite;
+  }
+  
+  
+  .org-nav-side {
+    max-width: 19%;
+    height:85vh;
+    background-color: #053659;
+    padding: 2%;
+    color: #ffffff;
+  }
+  
+  .org-nav-links a   {
+  
+    padding: 8%;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  #link {
+    margin: 15% 10%;
+    list-style-type: none;
+    font-size: x-large;
+  }
+  
+  .org-nav-links li {
+    margin: 20px 0;
+    cursor: pointer;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .modal-content {
+    background-color: #053659;
+    padding: 3% 5%;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .modal-content h3 {
+    margin-bottom: 8%;
+    font-size: 30px;
+  }
+  
+  .modal-content button {
+    margin: 15px;
+    margin-top: 14%;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: medium;
+  }
+  
+  .modal-content button:hover {
+    background-color: transparent;
+  
+    color: #ffffff;
+  
+  
+  }
+  /*Dashboard style/////////////////*/
+  .main {
+  
+   top: 20vh;
+   left: 45%;
+    position: absolute;
+  
+  }
+  
